@@ -7,6 +7,15 @@ Kamailio registrar server with pgsql database engine
 ```shell
 $  apt-get install git gcc flex bison make lib32ncurses5-dev libevent-dev libcurl4-gnutls-dev  libcurl4-nss-dev libcurl4-openssl-dev  apt-get install libcurl3
 ```
+## Install the LUA  
+```shell
+$  apt-get install lua5.1 liblua5.1-dev 
+```
+## Install the postgresql
+```shell
+$  sudo apt-get install postgresql-9.4 postgresql-client-9.4 libpq-dev
+```
+
 ## Install the Kamailio from GIT Repository
 ```shell
 $ git clone https://github.com/kamailio/kamailio.git
@@ -40,4 +49,40 @@ exclude_modules= acc_radius app_java app_mono app_perl app_python auth_ephemeral
 
 modules_all= $(filter-out modules/CVS,$(wildcard modules/*))
 
+```
+### After Installation of Kamailio edit kamctlrc (/usr/local/etc/kamailio/kamctlrc) as follow:
+
+```
+# this parameter.
+ DBENGINE=PGSQL
+
+## database host
+DBHOST=127.0.0.1
+
+## database post
+#DBPORT=5432
+
+## database name (for ORACLE this is TNS name)
+DBNAME=kamailio
+
+# database path used by dbtext, db_berkeley or sqlite
+# DB_PATH="/usr/local/etc/kamailio/dbtext"
+
+## database read/write user
+DBRWUSER="postgres"
+
+## password for database read/write user
+DBRWPW="kamailio"
+
+## database read only user
+DBROUSER="postgres"
+
+## password for database read only user
+DBROPW="kamailio"
+```
+### copy the kamailio_registrar_pgsql.cfg to your kamailio cfg directory(default:/usr/local/etc/kamailio)
+
+### start the kamailio with -f option 
+```shell
+$ kamailio -f /usr/local/etc/kamailio/kamailio_registrar_pgsql.cfg
 ```
