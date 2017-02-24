@@ -43,7 +43,7 @@ modules_dirs:=modules
 cfg_group_include=
 
 # the list of extra modules to compile
-include_modules=db_postgres app_lua http_async_client
+include_modules=db_postgres app_lua http_async_client json
 
 # the list of static modules
 static_modules=
