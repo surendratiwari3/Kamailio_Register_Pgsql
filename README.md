@@ -82,6 +82,11 @@ DBROPW="kamailio"
 ```
 ### copy the kamailio_registrar_pgsql.cfg to your kamailio cfg directory(default:/usr/local/etc/kamailio)
 
+### start http server
+```shell
+$ node getRoute.js
+```
+
 ### start the kamailio with -f option 
 ```shell
 $ kamailio -f /usr/local/etc/kamailio/kamailio_registrar_pgsql.cfg
