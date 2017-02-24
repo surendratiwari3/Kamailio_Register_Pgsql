@@ -86,3 +86,7 @@ DBROPW="kamailio"
 ```shell
 $ kamailio -f /usr/local/etc/kamailio/kamailio_registrar_pgsql.cfg
 ```
+### Note: you can test the Register with sipp scenario :
+```shell
+./sipp 172.31.26.0:7070 -sf test_scenario/Register.xml -inf test_scenario/Register.csv -m 1 -l 1
+```
