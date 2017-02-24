@@ -11,6 +11,13 @@ $  apt-get install git gcc flex bison make lib32ncurses5-dev libevent-dev libcur
 ```shell
 $  apt-get install lua5.1 liblua5.1-dev 
 ```
+
+## Install the node
+```shell
+$ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+```
+
 ## Install the postgresql
 ```shell
 $  sudo apt-get install postgresql-9.4 postgresql-client-9.4 libpq-dev
