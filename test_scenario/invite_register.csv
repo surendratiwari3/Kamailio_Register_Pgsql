@@ -1,3 +1,3 @@
 SEQUENTIAL
 bob;example.com;[authentication username=bob password=ttest1234];bob;2387-ksjdu2-2983-hsihf;
-alice;example.com;[authentication username=alice password=ttest1234];alice;2387-ksjdu2-2983-hsigh;
+alice;example.com;[authentication username=alice password=ttest1234];bob;2387-ksjdu2-2983-hsigh;
